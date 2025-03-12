@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacar Teks Berjalan</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        .marquee-container {
+            font-size: 24px;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+    <script>
+        function tampilkanCinta() {
+            // Array pilihan pernyataan
+            let pernyataan = ["Aku cinta kamu ❤️", "Aku tidak cinta kamu 💔"];
+            // Pilih secara acak
+            let teks = pernyataan[Math.floor(Math.random() * pernyataan.length)];
+            // Tampilkan teks di marquee
+            document.getElementById("marquee").innerText = teks;
+        }
+    </script>
+</head>
+<body onload="tampilkanCinta()">
+
+    <div class="marquee-container">
+        <marquee id="marquee">Loading...</marquee>
+    </div>
+
+    <button onclick="tampilkanCinta()">Coba Lagi</button>
+
+</body>
+</html>
